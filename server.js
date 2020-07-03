@@ -28,7 +28,7 @@ app.use(cors()); //using CORS to handle cross origin security
 
 // Route for endpoint root '/'
 app.get('/', (req, res)=> {
-    res.send(database.users);
+    res.json("Root endpoint. Application Server Listening on Port 3001");
 });
 
 // Route for endpoint /signin
@@ -49,6 +49,11 @@ app.get('/profile/:id', (req, res) => {
 // Route for endpoint /image
 app.put('/image', (req, res) => {
     image.handleImage(req, res, db);
+});
+
+// Clarifai route for endpoint /image
+app.post('/imageurl', (req, res) => {
+    image.handleApiCall(req, res);
 });
 
 // Define port to listen on.
