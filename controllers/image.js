@@ -1,6 +1,6 @@
 const Clarifai = require('clarifai');
 
-//The Clarifai Model key set below is current as of 7-3-2020
+//The Clarifai Model Key set below is current as of 7-3-2020
 //and can be found at on Clarifai's API documentation
 //at https://www.clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection
 const FACE_DETECT_MODEL_KEY = 'a403429f2ddf4b49b307e318f00e528b';

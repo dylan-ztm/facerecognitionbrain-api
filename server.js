@@ -3,7 +3,7 @@ const app       = express();
 const bcrypt    = require('bcrypt-nodejs');
 const cors      = require('cors');
 const knex      = require('knex');
-const PORT      = 3001;
+const PORT      = 3001; //will need environment variable
 
 //controllers created on 7-2-2020 for endpoint management
 const register  = require('./controllers/register');
@@ -24,7 +24,7 @@ const db = knex({
 // Middleware methods
 app.use(express.json());
 app.use(cors()); //using CORS to handle cross origin security
-// end Middleware methods
+// end Middleware methods.
 
 // Route for endpoint root '/'
 app.get('/', (req, res)=> {
