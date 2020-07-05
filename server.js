@@ -3,7 +3,7 @@ const app       = express();
 const bcrypt    = require('bcrypt-nodejs');
 const cors      = require('cors');
 const knex      = require('knex');
-const PORT      = 3001; //will need environment variable
+const PORT      = process.env.PORT;
 
 //controllers created on 7-2-2020 for endpoint management
 const register  = require('./controllers/register');
@@ -57,6 +57,6 @@ app.post('/imageurl', (req, res) => {
 });
 
 // Define port to listen on.
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log (`Success. Application Server is listening on Port ${PORT}.`);
 });
