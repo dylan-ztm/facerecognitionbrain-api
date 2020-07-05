@@ -28,7 +28,7 @@ app.use(cors()); //using CORS to handle cross origin security
 
 // Route for endpoint root '/'
 app.get('/', (req, res)=> {
-    res.json("Root endpoint. Application Server Listening on Port 3001");
+    res.json(`Root endpoint. Application Server Listening on Port ${PORT}`);
 });
 
 // Route for endpoint /signin
