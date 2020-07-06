@@ -11,6 +11,12 @@ const signin    = require('./controllers/signin');
 const profile   = require('./controllers/profile');
 const image     = require ('./controllers/image');
 
+//only use next line for demo web apps. not best practice
+//for production environment.  next statement is needed
+//to resolve SSL certificate issues with Hobby-Free version
+//on Heroku.
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
             client: 'pg',
             connection: {
